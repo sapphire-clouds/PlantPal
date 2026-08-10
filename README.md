@@ -153,9 +153,9 @@ When you add a new plant through the **Add Plant** form, PlantPal automatically 
 
 ## Screenshots
 
-![dashboard](Screenshot\image.png)
-![alt text](Screenshot\image-1.png)
-![alt text](Screenshot\image-3.png)
+![dashboard](Screenshot/image.png)
+![alt text](Screenshot/image-1.png)
+![alt text](Screenshot/image-3.png)
 ## Future Improvements
 
 - Weather-aware watering suggestions for outdoor/balcony plants
