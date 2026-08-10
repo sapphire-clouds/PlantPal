@@ -1,6 +1,6 @@
 # 🌿 PlantPal
 
-A cute, cozy digital garden for tracking the plants you actually grow — tulsi on the balcony, curry leaf on the kitchen sill, the money plant that refuses to die. Built as a frontend-only React portfolio project.
+A cute, cozy digital garden for tracking the plants you actually grow. Tulsi on the balcony, curry leaf on the kitchen sill, the money plant that refuses to die. Built as a frontend-only React project.
 
 > A cute little digital garden made for an Indian plant lover.
 
@@ -8,45 +8,44 @@ A cute, cozy digital garden for tracking the plants you actually grow — tulsi 
 
 ## Overview
 
-PlantPal lets you add, edit, and track the plants in your home. It calculates watering schedules, health status, and daily care tasks automatically from your plant data — nothing is hard-coded. Everything is saved to `localStorage`, so your garden survives a refresh.
+PlantPal lets you add, edit and track the plants in your home. It calculates watering schedules, health status and daily care tasks automatically from your plant data. Nothing is hard-coded. Everything is saved to `localStorage`, so your garden survives a refresh.
 
-No backend, no database, no build complexity — just `npm install` and `npm run dev`.
+No backend, no database, no build complexity. Just `npm install` and `npm run dev`.
 
 ## Features
 
-- **Dashboard** with a warm greeting, hero illustration, live stats, and today's care tasks
-- **My Plants** grid with search, filters (All / Healthy / Needs Attention / Needs Water), and sorting (Name / Health / Watering Due)
-- **Plant Details** page — a little digital plant journal with a big illustration, health bar, care info, and editable notes
+- **Dashboard** with a warm greeting, hero illustration, live stats and today's care tasks
+- **My Plants** grid with search, filters (All / Healthy / Needs Attention / Needs Water) and sorting (Name / Health / Watering Due)
+- **Plant Details** page, a little digital plant journal with a big illustration, health bar, care info and editable notes
 - **Add / Edit Plant** with a validated form (required fields, numeric watering frequency, valid date)
 - **Delete Plant** with a confirmation dialog
-- **Mark as Watered** — recalculates the next watering date instantly, everywhere in the app
+- **Mark as Watered**, recalculates the next watering date instantly, everywhere in the app
 - **Care Schedule** grouping every upcoming task by day (Today, Tomorrow, and beyond)
-- **Graceful image fallback** — a soft botanical placeholder with a sprout icon and the plant's name whenever an illustration is missing, so the app looks complete before you've added a single PNG
+- **Graceful image fallback**: a soft botanical placeholder with a sprout icon and the plant's name whenever an illustration is missing, so the app looks complete before you've added a single PNG
 - **Empty state** with a friendly illustration when the garden has no plants
-- Fully responsive: sidebar navigation on desktop, bottom tab bar on mobile
-- Persisted entirely in `localStorage` — no backend required
+- Fully responsive. Sidebar navigation on desktop, bottom tab bar on mobile
+- Persisted entirely in `localStorage`. No backend required
 
 ## Tech Stack
 
 - React 18 + Vite
 - React Router DOM (client-side routing)
-- React Context API (shared plant state — no Redux)
+- React Context API (shared plant state, no Redux)
 - Plain CSS (custom design system, no Tailwind)
 - lucide-react (icons)
 - Google Fonts: Fraunces (display) + Nunito Sans (body)
 
 ## React Concepts Demonstrated
 
-- **useState** — forms, search, filters, sort, dialogs, notes editing
-- **useEffect** — persisting the garden to `localStorage` whenever it changes
-- **useMemo** — filtered/sorted plant lists, dashboard statistics, care-task grouping (all derived, never duplicated in state)
-- **Context API** — `PlantContext` centralizes `addPlant`, `updatePlant`, `deletePlant`, `waterPlant`, `getPlant`, `updateNotes`
-- **React Router** — five routes, `NavLink` active states, `useParams`/`useNavigate`
-- **Component composition** — small reusable pieces (`PlantCard`, `PlantImage`, `HealthBar`, `StatCard`, `CareTask`, `PlantForm`, `SearchBar`, `EmptyState`, `ConfirmDialog`) shared across pages
-- **Controlled forms** with inline validation and reuse between Add and Edit flows
+- **useState**: forms, search, filters, sort, dialogs, notes editing
+- **useEffect**: persisting the garden to `localStorage` whenever it changes
+- **useMemo**: filtered/sorted plant lists, dashboard statistics, care-task grouping. All derived, never duplicated in state
+- **Context API**: `PlantContext` centralizes `addPlant`, `updatePlant`, `deletePlant`, `waterPlant`, `getPlant`, `updateNotes`
+- **React Router**: five routes, `NavLink` active states, `useParams`/`useNavigate`
+- **Component composition**: small reusable pieces (`PlantCard`, `PlantImage`, `HealthBar`, `StatCard`, `CareTask`, `PlantForm`, `SearchBar`, `EmptyState`, `ConfirmDialog`) shared across pages
+- **Controlled forms** with inline validation, reused between the Add and Edit flows
 
 ## Project Structure
-
 ```
 PlantPal/
 ├── package.json
@@ -154,8 +153,9 @@ When you add a new plant through the **Add Plant** form, PlantPal automatically 
 
 ## Screenshots
 
-_Add screenshots of the Dashboard, My Plants grid, and Plant Details page here once you've run the app locally._
-
+![dashboard](Screenshot\image.png)
+![alt text](Screenshot\image-1.png)
+![alt text](Screenshot\image-3.png)
 ## Future Improvements
 
 - Weather-aware watering suggestions for outdoor/balcony plants
