@@ -1,0 +1,108 @@
+/* ==========================================================================
+   Dashboard — hero + dashboard-only layout
+   ========================================================================== */
+
+.dashboard-page {
+  gap: 32px;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  background: linear-gradient(135deg, var(--sage-pale) 0%, var(--beige-soft) 100%);
+  border-radius: 32px 14px 32px 14px;
+  padding: 40px 44px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(47, 74, 59, 0.08);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(231, 185, 76, 0.25), transparent 70%);
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 460px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-eyebrow {
+  font-weight: 700;
+  color: var(--sage-dark);
+  font-size: 14.5px;
+}
+
+.hero-text h1 {
+  font-size: 32px;
+  line-height: 1.22;
+}
+
+.hero-text p {
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.hero-text .btn {
+  margin-top: 6px;
+}
+
+.hero-art {
+  flex-shrink: 0;
+  width: 220px;
+  height: 220px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-art-image {
+  width: 100%;
+  height: 100%;
+  animation: hero-sway 5s ease-in-out infinite;
+}
+
+@keyframes hero-sway {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(1deg);
+  }
+}
+
+.dashboard-section {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: left;
+    padding: 30px 26px;
+  }
+
+  .hero-art {
+    width: 150px;
+    height: 150px;
+  }
+
+  .hero-text h1 {
+    font-size: 25px;
+  }
+}
